@@ -1,0 +1,13 @@
+# Activar el motor de reescritura
+RewriteEngine On
+RewriteBase /prueba-php/
+
+# Permitir el acceso directo a archivos en /public/assets/
+RewriteCond %{REQUEST_URI} !^/prueba-php/assets/
+
+# Redirigir a la carpeta public si no se especifica un archivo o directorio
+RewriteCond %{REQUEST_URI} !^/prueba-php/public/
+RewriteRule ^(.*)$ public/$1 [L]
+
+# Establecer login.php como el archivo predeterminado
+DirectoryIndex login.php

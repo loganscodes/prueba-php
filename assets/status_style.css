@@ -1,0 +1,14 @@
+.bg-pending {
+    background-color: red;
+    color: white;
+}
+
+.bg-in-progress {
+    background-color: orange;
+    color: white;
+}
+
+.bg-completed {
+    background-color: green;
+    color: white;
+}
